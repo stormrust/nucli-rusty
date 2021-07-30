@@ -13,7 +13,7 @@ The following crates are included so one can modify them...
 * nu-completion
 
 Also in the nu-cli crate
-[rustyline version ](https://github.com/stormasm/rustyline81)
+[rustyline version 8.1.0](https://github.com/stormasm/rustyline81)
 is available as its own crate in
 which one can modify it to see how things work locally...
 
@@ -22,4 +22,4 @@ rustyline = { git = "https://github.com/stormasm/rustyline81", branch = "main", 
 ```
 
 This crate can not be included along with the other crates because of the
-cyclical dependency issue of cargo with the interior rustyline-derive crate.
+cyclical dependency issue of cargo with the interior rustyline-derive crate so we break it out into its own github repo which can then be referenced by others who want to play with rustyline and modify debug it.
